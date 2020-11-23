@@ -6863,7 +6863,9 @@ Sigma_Exit:
           SERIAL_ECHOPGM(" EXTRUDER_COUNT:"); 
           SERIAL_ECHOPGM(STRINGIFY(EXTRUDERS)); 
           SERIAL_ECHOPGM(" UUID:"); 
-          SERIAL_ECHOLNPGM(MACHINE_UUID);
+          SERIAL_ECHOPGM(MACHINE_UUID);
+          SERIAL_ECHOPGM(" PAUSED:");
+          SERIAL_ECHOLN(isPrintPaused ? 1 : 0);
       }
       
 #ifdef EXTENDED_CAPABILITIES_REPORT
